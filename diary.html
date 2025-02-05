@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나만의 비밀 일기장</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="diary-container">
+    <h1>나만의 비밀 일기장</h1>
+    <input type="text" id="entryTitle" placeholder="일기 제목을 입력하세요">
+    <textarea id="diaryContent" placeholder="여기에 당신의 비밀을 작성하세요..."></textarea>
+    <button onclick="saveEntry()">저장하기</button>
+    <p id="status-message"></p>
+    
+    <h2>저장된 일기</h2>
+    <ul id="entryList"></ul>
+    
+    <h2>테마 이미지 변경</h2>
+    <input type="file" id="themeUploader" accept="image/*">
+    <button onclick="applyTheme()">테마 적용</button>
+    
+    <h2>파일 내보내기 / 불러오기</h2>
+    <button onclick="exportData()">파일 내보내기</button>
+    <input type="file" id="importData" onchange="importData(event)">
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
